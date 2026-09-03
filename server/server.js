@@ -10,7 +10,7 @@ const path = require('path');
 const fs = require('fs');
 const express = require('express');
 const { Client, GatewayIntentBits } = require('discord.js');
-require('dotenv').config();
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const PORT = Number(process.env.PORT) || 3000;
 const TOKEN = process.env.DISCORD_TOKEN;
