@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exalted — Администрация</title>
+  <meta name="description" content="Администрация сообщества Exalted. Нажмите на ник, чтобы открыть профиль.">
+  <link rel="icon" type="image/png" href="icon/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="gallery.html">Галерея</a>
+    </nav>
+    <a class="discord-invite" href="https://discord.gg/KnYTW8vgNv" target="_blank" rel="noopener" aria-label="Присоединиться к Discord">
+      <img src="icon/invite.png" alt="Discord">
+      <span class="invite-box">присоединиться</span>
+    </a>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Команда</span>
+      <h1>Администрация</h1>
+      <p>Люди, которые держат Exalted на плаву.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="admins-grid">
+
+        <!-- Mondschein — Owner -->
+        <article class="admin-card" style="--card-accent: #b39bff;">
+          <div class="admin-avatar-wrap">
+            <img src="avatar/mond.png" alt="Mondschein" loading="lazy">
+          </div>
+          <span class="admin-name" data-user-id="889132845199659029"
+                data-username="Mondschein"
+                data-avatar="avatar/mond.png"
+                data-role="Owner">Mondschein</span>
+          <div class="admin-role-badge">Owner</div>
+        </article>
+
+        <!-- hell私は年後に死ぬ — Supp Owner -->
+        <article class="admin-card" style="--card-accent: #c77dff;">
+          <div class="admin-avatar-wrap">
+            <img src="avatar/hell.png" alt="hell私は年後に死ぬ" loading="lazy">
+          </div>
+          <span class="admin-name" data-user-id="880812412947820574"
+                data-username="hell私は年後に死ぬ"
+                data-avatar="avatar/hell.png"
+                data-role="Supp Owner">hell私は年後に死ぬ</span>
+          <div class="admin-role-badge">Supp Owner</div>
+        </article>
+
+        <!-- Ocя́ka — Critic -->
+        <article class="admin-card" style="--card-accent: #e58ff3;">
+          <div class="admin-avatar-wrap">
+            <img src="avatar/osya.png" alt="Ocя́ka" loading="lazy">
+          </div>
+          <span class="admin-name" data-user-id="1084756360337555518"
+                data-username="Ocя́ka"
+                data-avatar="avatar/osya.png"
+                data-role="Critic">Ocя́ka</span>
+          <div class="admin-role-badge">Critic</div>
+        </article>
+
+        <!-- dizmorality — Server Admin -->
+        <article class="admin-card" style="--card-accent: #a48cff;">
+          <div class="admin-avatar-wrap">
+            <img src="avatar/dismorality.png" alt="dizmorality" loading="lazy">
+          </div>
+          <span class="admin-name" data-user-id="646425773577732096"
+                data-username="dizmorality"
+                data-avatar="avatar/dismorality.png"
+                data-role="Server Admin">dizmorality</span>
+          <div class="admin-role-badge">Server Admin</div>
+        </article>
+
+        <!-- Schola Iteratorum — Administrator -->
+        <article class="admin-card" style="--card-accent: #8e7bff;">
+          <div class="admin-avatar-wrap">
+            <img src="avatar/onebip.png" alt="Schola Iteratorum" loading="lazy">
+          </div>
+          <span class="admin-name" data-user-id="515158254557331457"
+                data-username="Schola Iteratorum"
+                data-avatar="avatar/onebip.png"
+                data-role="Administrator">Schola Iteratorum</span>
+          <div class="admin-role-badge">Administrator</div>
+        </article>
+
+        <!-- Xlopk4 — Staff Admin -->
+        <article class="admin-card" style="--card-accent: #d18bff;">
+          <div class="admin-avatar-wrap">
+            <img src="avatar/xlopka.png" alt="Xlopk4" loading="lazy">
+          </div>
+          <span class="admin-name" data-user-id="683924703898763432"
+                data-username="Xlopk4"
+                data-avatar="avatar/xlopka.png"
+                data-role="Staff Admin">Xlopk4</span>
+          <div class="admin-role-badge">Staff Admin</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-logo">Exalted</span>
+    <span>Вознесение начинается здесь</span>
+  </footer>
+
+  <!-- Discord-модалка профиля -->
+  <div class="modal-overlay" id="member-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <!-- Баннер -->
+      <div class="modal-banner" id="modal-banner">
+        <button class="modal-close" id="modal-close" aria-label="Закрыть">✕</button>
+      </div>
+
+      <!-- Шапка профиля -->
+      <div class="modal-head">
+        <div class="modal-avatar">
+          <img id="modal-avatar-img" src="avatar/mond.png" alt="">
+        </div>
+        <div class="modal-identity">
+          <div class="modal-display">
+            <span id="modal-display-name">Загрузка…</span>
+            <span class="modal-status-dot" id="modal-status"></span>
+          </div>
+          <span class="modal-username" id="modal-username"></span>
+          <span class="modal-nicknote" id="modal-nicknote" hidden></span>
+        </div>
+      </div>
+
+      <!-- Контент -->
+      <div class="modal-body">
+        <div class="modal-loading" id="modal-loading">
+          <span class="spinner"></span>
+          <span>Загружаем профиль из Discord…</span>
+        </div>
+
+        <div id="modal-content" style="display:none; flex-direction: column; gap: 16px;">
+
+          <div class="modal-section">
+            <div class="modal-section-title">О себе / роль</div>
+            <p class="modal-about-text" id="modal-about"></p>
+          </div>
+
+          <div class="modal-section">
+            <div class="modal-section-title">Роли</div>
+            <div class="role-pills" id="modal-roles"></div>
+          </div>
+
+          <div class="modal-section">
+            <div class="modal-section-title">Активность</div>
+            <div id="modal-activity"><span class="no-activity">Проверяем…</span></div>
+          </div>
+
+          <div class="modal-section">
+            <div class="modal-section-title">Интеграции</div>
+            <div id="modal-integrations"><span class="integ-none">Загружаем…</span></div>
+          </div>
+
+          <div class="modal-section member-since">
+            <span class="label">В участниках с</span>
+            <span class="value" id="modal-since">—</span>
+          </div>
+
+        </div>
+
+        <div class="modal-live-note" id="modal-live-note" hidden>
+          Живые данные Discord сейчас недоступны — запусти сервер (server → npm start), чтобы профиль читался в реальном времени.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

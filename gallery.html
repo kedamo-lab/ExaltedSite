@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exalted — Галерея</title>
+  <meta name="description" content="Галерея видео сообщества Exalted.">
+  <link rel="icon" type="image/png" href="icon/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="main-nav">
+      <a href="index.html">Главная</a>
+      <a href="gallery.html" class="active">Галерея</a>
+    </nav>
+    <a class="discord-invite" href="https://discord.gg/KnYTW8vgNv" target="_blank" rel="noopener" aria-label="Присоединиться к Discord">
+      <img src="icon/invite.png" alt="Discord">
+      <span class="invite-box">присоединиться</span>
+    </a>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Видео</span>
+      <h1>Галерея</h1>
+      <p>Наши кадры: озвучки, кинопросмотры и закулисье.</p>
+    </div>
+  </section>
+
+  <!--
+    КАК ВЫКЛАДЫВАТЬ ВИДЕО ЧЕРЕЗ КОД:
+
+    1) Прямое видео (mp4/webm) — внутри ячейки замените содержимое на:
+         <video src="путь-или-ссылка/на-файл.mp4" controls></video>
+
+    2) YouTube — вставьте iframe:
+         <iframe src="https://www.youtube.com/embed/КОД_ВИДЕО" allowfullscreen loading="lazy"></iframe>
+
+    3) Без кода: просто нажмите на пустую ячейку (будучи администратором) и вставьте ссылку 
+       на mp4 или на ютуб-видео — вложения сохранятся на сервере (в файле gallery.json).
+
+    Ячейки можно добавлять/удалять ниже: <div class="gallery-cell" data-cell></div>
+  -->
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="gallery-grid" id="gallery-grid">
+
+        <!-- Пример ячейки с mp4-видео через код (раскомментируй и укажи ссылку):
+        <div class="gallery-cell">
+          <video src="https://example.com/video.mp4" controls></video>
+          <div class="cell-actions"><button title="Убрать видео" data-remove>✕</button></div>
+        </div>
+        -->
+
+        <!-- Пример ячейки с YouTube через код:
+        <div class="gallery-cell">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen loading="lazy"></iframe>
+          <div class="cell-actions"><button title="Убрать видео" data-remove>✕</button></div>
+        </div>
+        -->
+
+        <div class="gallery-cell" data-cell>
+          <div class="cell-placeholder">
+            <span class="plus">+</span>
+            <span>Добавить видео</span>
+          </div>
+          <div class="cell-form">
+            <input type="url" placeholder="Ссылка на mp4 или YouTube…" data-cell-input>
+            <div class="form-row">
+              <button class="btn btn-primary btn-sm" data-cell-add>Добавить</button>
+              <button class="btn btn-ghost btn-sm" data-cell-cancel>Отмена</button>
+            </div>
+            <span class="form-note">mp4 · webm · YouTube</span>
+          </div>
+        </div>
+
+        <div class="gallery-cell" data-cell>
+          <div class="cell-placeholder">
+            <span class="plus">+</span>
+            <span>Добавить видео</span>
+          </div>
+          <div class="cell-form">
+            <input type="url" placeholder="Ссылка на mp4 или YouTube…" data-cell-input>
+            <div class="form-row">
+              <button class="btn btn-primary btn-sm" data-cell-add>Добавить</button>
+              <button class="btn btn-ghost btn-sm" data-cell-cancel>Отмена</button>
+            </div>
+            <span class="form-note">mp4 · webm · YouTube</span>
+          </div>
+        </div>
+
+        <div class="gallery-cell" data-cell>
+          <div class="cell-placeholder">
+            <span class="plus">+</span>
+            <span>Добавить видео</span>
+          </div>
+          <div class="cell-form">
+            <input type="url" placeholder="Ссылка на mp4 или YouTube…" data-cell-input>
+            <div class="form-row">
+              <button class="btn btn-primary btn-sm" data-cell-add>Добавить</button>
+              <button class="btn btn-ghost btn-sm" data-cell-cancel>Отмена</button>
+            </div>
+            <span class="form-note">mp4 · webm · YouTube</span>
+          </div>
+        </div>
+
+        <div class="gallery-cell" data-cell>
+          <div class="cell-placeholder">
+            <span class="plus">+</span>
+            <span>Добавить видео</span>
+          </div>
+          <div class="cell-form">
+            <input type="url" placeholder="Ссылка на mp4 или YouTube…" data-cell-input>
+            <div class="form-row">
+              <button class="btn btn-primary btn-sm" data-cell-add>Добавить</button>
+              <button class="btn btn-ghost btn-sm" data-cell-cancel>Отмена</button>
+            </div>
+            <span class="form-note">mp4 · webm · YouTube</span>
+          </div>
+        </div>
+
+        <div class="gallery-cell" data-cell>
+          <div class="cell-placeholder">
+            <span class="plus">+</span>
+            <span>Добавить видео</span>
+          </div>
+          <div class="cell-form">
+            <input type="url" placeholder="Ссылка на mp4 или YouTube…" data-cell-input>
+            <div class="form-row">
+              <button class="btn btn-primary btn-sm" data-cell-add>Добавить</button>
+              <button class="btn btn-ghost btn-sm" data-cell-cancel>Отмена</button>
+            </div>
+            <span class="form-note">mp4 · webm · YouTube</span>
+          </div>
+        </div>
+
+        <div class="gallery-cell" data-cell>
+          <div class="cell-placeholder">
+            <span class="plus">+</span>
+            <span>Добавить видео</span>
+          </div>
+          <div class="cell-form">
+            <input type="url" placeholder="Ссылка на mp4 или YouTube…" data-cell-input>
+            <div class="form-row">
+              <button class="btn btn-primary btn-sm" data-cell-add>Добавить</button>
+              <button class="btn btn-ghost btn-sm" data-cell-cancel>Отмена</button>
+            </div>
+            <span class="form-note">mp4 · webm · YouTube</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span class="footer-logo">Exalted</span>
+    <span>Вознесение начинается здесь</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

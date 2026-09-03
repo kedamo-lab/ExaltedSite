@@ -1,0 +1,18 @@
+# Render Blueprint — автоматическое развёртывание сайта Exalted
+# См. https://render.com/docs/blueprint-spec
+# После подключения репозитория к Render сервис создастся сам.
+services:
+  - type: web
+    name: exalted-site
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    plan: free
+    envVars:
+      # Секретный токен Discord-бота.
+      # sync: false — значение задаётся вручную в дашборде Render
+      # (Dashboard → Environment), в коде его нет и быть не должно.
+      - key: DISCORD_TOKEN
+        sync: false

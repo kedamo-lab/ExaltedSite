@@ -1,0 +1,10 @@
+# зависимости и секреты
+node_modules/
+.env
+*.log
+
+# временные/исходные артефакты картинок, не нужные в репозитории
+icon/_check_invite.png
+icon/_check_lime.png
+icon/invite_transparent.png
+icon/ChatGPT Image*.png

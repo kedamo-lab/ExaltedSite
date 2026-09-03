@@ -1,0 +1,15 @@
+{
+  "name": "exalted-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Сайт сообщества Exalted — статика + сервер Discord-бота (workspace server/)",
+  "workspaces": [
+    "server"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server/server.js"
+  }
+}
